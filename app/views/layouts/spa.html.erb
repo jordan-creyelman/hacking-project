@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReactRails</title>
+    <%# <%= csrf_meta_tags
+    <%# <%= csp_meta_tag %> 
+    <%# <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %> %>
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> %>
+    <%# <%= javascript_pack_tag 'components/hello_react' %> %>
+    <%# < <%=javascript_tag 'components/hello'%>  %>
+  
+
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3xk3_7ltnTVru-c7zEQkxqD1obxbcnSQ&callback=initMap&v=weekly|language=fr&region=EU"
+      async
+    ></script>
+  </head>
+  <body>
+    <%# <%= yield %> 
+    <div id=map>
+    </div>
+  <script >  
+    let map;
+
+function initMap() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 17,
+    center: { lat:  50.42047929260582, lng: 4.447901388919031},
+     
+  });
+}
+</script>
+<style>
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 500px;
+  width:400px;
+
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+  </body>
+</html>
